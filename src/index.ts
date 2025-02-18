@@ -56,7 +56,8 @@ TabelaElemento.addEventListener("click", function (evento) {
   if ((<HTMLElement>evento.target).id.includes("check")) {
     var id = (<HTMLElement>evento.target).id;
     id = id.replace("check", "");
-    
+    console.log("CONCLUINDO TAREFA "+id)
+    concluirTarefa(Number(id))
   }
 });
 function saveItemTabela(form: Form, id: number) {
@@ -115,17 +116,8 @@ function attPrimeiraTabela(dados: string[]) {
     " itens registrados no sistema <br>";
 }
 
-function montarData(): string {
-  var dataFormatada = new Date().toLocaleString("pt-BR", {
-    hour: "2-digit", // Hora
-    minute: "2-digit",
-  });
-  return dataFormatada;
-}
 function atualizarTabelaUpdate(form: Form, id: number) {
   var dados = form.montarTabelaUpdate(id);
-
-
     CorpoTabelaElemento.innerHTML = "";
     CorpoTabelaElemento.innerHTML = dados;
   
@@ -145,4 +137,12 @@ function mostrarMsg(msg: string, sucess: boolean) {
       (<HTMLElement>msgDanger).style.display = "none";
     }, 3000);
   }
+}
+function concluirTarefa(id:number){
+  //encontrar a tarefa pelo  ID
+
+  // alterar o seu status
+
+  //atualizar a tabela
+
 }
