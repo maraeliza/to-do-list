@@ -1,0 +1,34 @@
+.inputTabela{
+    border:none;
+    background-color: #ffffff;
+    padding:5px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.btm{
+    border:none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+.btm:hover{
+    background-color: #ffffff69;
+}
+
+.btm img{
+    width:30px;
+    height: 30px;
+}
+#msgSucesso, #msgDanger{
+    display: none;
+}
+
+.acao{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
