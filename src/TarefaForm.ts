@@ -71,9 +71,7 @@ export default class TarefaForm extends Form {
         alterado = true;
       }
 
-      var status = statusElemento.value;
-        tarefa.status = ['feito', 'não feito'].includes(status) ;
-        alterado = true;
+
       
     }
     return alterado;

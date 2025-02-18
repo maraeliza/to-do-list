@@ -74,10 +74,8 @@ export default abstract class Form {
     tituloTabela += "<th style='text-align:center'> AÇÃO </th>";
 
     for (var obj of this.Lista) {
-      tabela += "<tr><th><input type='checkbox' ></th>";
-      
+      tabela += "<tr><th><input type='checkbox' id='check"+obj.id+"'></th>";
       for (var coluna of this.getCampos()) {
-
         tabela += "<th>" + obj.getValue(coluna) + "</th>";
       }
       tabela += this.montarColunaAcao(obj.id);

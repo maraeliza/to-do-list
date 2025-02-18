@@ -52,6 +52,13 @@ TabelaElemento.addEventListener("click", function (evento) {
     saveItemTabela(form, parseInt(id));
   }
 });
+TabelaElemento.addEventListener("click", function (evento) {
+  if ((<HTMLElement>evento.target).id.includes("check")) {
+    var id = (<HTMLElement>evento.target).id;
+    id = id.replace("check", "");
+    
+  }
+});
 function saveItemTabela(form: Form, id: number) {
   if (form.update(id)) {
     atualizarTabela(form);
@@ -139,4 +146,3 @@ function mostrarMsg(msg: string, sucess: boolean) {
     }, 3000);
   }
 }
-
